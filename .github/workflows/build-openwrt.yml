@@ -17,8 +17,8 @@ on:
   workflow_dispatch:
 
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede
-  REPO_BRANCH: master
+  REPO_URL: https://github.com/xcozer/lede
+  REPO_BRANCH: cmake3.31
   REPO_COMMIT: f345d0c9a1514c79ae71ff92cd1cd607176800f7
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
@@ -56,7 +56,7 @@ jobs:
       working-directory: /workdir
       run: |
         df -hT $PWD
-        git clone $REPO_URL --revision=$REPO_COMMIT openwrt
+        git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
 
     - name: Load custom feeds
