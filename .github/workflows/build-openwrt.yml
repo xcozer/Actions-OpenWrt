@@ -18,7 +18,7 @@ on:
 
 env:
   REPO_URL: https://github.com/xcozer/lede
-  REPO_BRANCH: cmake3.31
+  REPO_BRANCH: cmake
   REPO_COMMIT: f345d0c9a1514c79ae71ff92cd1cd607176800f7
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
